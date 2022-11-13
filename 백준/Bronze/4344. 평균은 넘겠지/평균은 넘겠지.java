@@ -6,33 +6,31 @@ public class Main {
         
         Scanner sc = new Scanner(System.in);
         
-        int c = sc.nextInt();
-        int[] arr;
+        int T = sc.nextInt();
         
-        for (int i = 0; i < c; i++) {
+        
+        for (int i = 0; i < T; i++) {
             
-            int n =sc.nextInt();
-            arr = new int[n];
-            
+            int N =sc.nextInt();
+            int[] arr = new int[N];
             double sum = 0;
             
-            for (int j = 0; j < n; j++) {
+            for (int j = 0; j < N; j++) {
                 
                 int val = 0;
-                val = sc.nextInt();
-                arr[j] = val;
-                sum += val;
+                arr[j] = sc.nextInt();             
+                sum += arr[j];
             }
-            double mean = (sum/n);
+            double mean = (sum/N);
             double count = 0;
             
-            for (int k = 0; k < n; k++) {
+            for (int k = 0; k < N; k++) {
                 
                 if (arr[k] > mean) {
                     count++;
                 }
                 
-            } System.out.printf("%.3f%%\n", (count/n)*100);
+            } System.out.printf("%.3f%%\n", (count/N)*100);
         }
     }
 }
