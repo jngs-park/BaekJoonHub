@@ -10,7 +10,7 @@ public class Solution {
             int m2 = sc.nextInt();
             int h = h1 + h2;
             int m = m1 + m2;
-            if( m > 60 ) {
+            if( m >= 60 ) {
                 m -= 60;
                 h++;
             }
